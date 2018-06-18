@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+<!-- Content Serving Servlet -->
+  	<display-name>MVC Servlet</display-name>
+  	<description>Sample for SER422</description>
+  	
+<!-- Servlets (Controllers)-->  
+  	<servlet>
+    	<servlet-name>Login</servlet-name>
+    	<servlet-class>edu.asupoly.ser422.controllers.Login_Servlet</servlet-class>
+    	<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+  	<servlet>
+  		<servlet-name>Welcome</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.controllers.MVC_Servlet</servlet-class>
+  		<init-param>
+    		<param-name>personfile</param-name>
+    		<param-value>C:/Users/firem/SER422WebApplicationProgramming/Week-2/lab2.xml</param-value>
+  		</init-param>
+  		<init-param>
+    		<param-name>_lockfile</param-name>
+    		<param-value>C:/Users/firem/SER422WebApplicationProgramming/Week-2/lab2.lock</param-value>
+  		</init-param>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+  	<servlet>
+  		<servlet-name>Controller</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.controllers.Controller_Servlet</servlet-class>
+  		<init-param>
+    		<param-name>personfile</param-name>
+    		<param-value>C:/Users/firem/SER422WebApplicationProgramming/Week-2/lab2.xml</param-value>
+  		</init-param>
+  		<init-param>
+    		<param-name>_lockfile</param-name>
+    		<param-value>C:/Users/firem/SER422WebApplicationProgramming/Week-2/lab2.lock</param-value>
+  		</init-param>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+  	<servlet>
+  		<servlet-name>userController</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.controllers.Details_Servlet</servlet-class>
+  		<init-param>
+    		<param-name>personfile</param-name>
+    		<param-value>C:/Users/firem/SER422WebApplicationProgramming/Week-2/lab2.xml</param-value>
+  		</init-param>
+  		<init-param>
+    		<param-name>_lockfile</param-name>
+    		<param-value>C:/Users/firem/SER422WebApplicationProgramming/Week-2/lab2.lock</param-value>
+  		</init-param>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+<!-- Servlets (Views)-->   	
+  	<servlet>
+  		<servlet-name>CreateView</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.views.CreateView</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet>
+
+	<servlet>
+  		<servlet-name>LanguagesView</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.views.LanguagesView</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+  	<servlet>
+  		<servlet-name>DaysView</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.views.DaysView</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet> 	
+  	
+  	<servlet>
+  		<servlet-name>CustomView</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.views.CustomView</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet> 
+  	
+  	<servlet>
+  		<servlet-name>ReviewView</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.views.ReviewView</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet> 
+  	
+  	<servlet>
+  		<servlet-name>UserView</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.views.UserView</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+  	<servlet>
+  		<servlet-name>RemoveView</servlet-name>
+  		<servlet-class>edu.asupoly.ser422.views.RemoveView</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+  	</servlet>
+  	
+  	
+<!-- Servlet Mappings -->
+  	<servlet-mapping>
+    	<servlet-name>Login</servlet-name>
+    	<url-pattern>/</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+  		<servlet-name>Welcome</servlet-name>
+  		<url-pattern>/welcome</url-pattern>
+  	</servlet-mapping>
+  
+  	<servlet-mapping>
+  		<servlet-name>Controller</servlet-name>
+  		<url-pattern>/controller</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+  		<servlet-name>userController</servlet-name>
+  		<url-pattern>/usercontroller</url-pattern>
+  	</servlet-mapping>
+  
+  	<servlet-mapping>
+  		<servlet-name>CreateView</servlet-name>
+  		<url-pattern>/create</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+  		<servlet-name>LanguagesView</servlet-name>
+  		<url-pattern>/languages</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+  		<servlet-name>DaysView</servlet-name>
+  		<url-pattern>/days</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+  		<servlet-name>CustomView</servlet-name>
+  		<url-pattern>/custom</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+  		<servlet-name>ReviewView</servlet-name>
+  		<url-pattern>/review</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+  		<servlet-name>UserView</servlet-name>
+  		<url-pattern>/view</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet-mapping>
+  		<servlet-name>RemoveView</servlet-name>
+  		<url-pattern>/remove</url-pattern>
+  	</servlet-mapping>
+  	
+	<!-- Default Landing Page -->
+ 	<welcome-file-list>
+   		<welcome-file>index.html</welcome-file>
+ 	</welcome-file-list>
+
+</web-app>
